@@ -1,7 +1,7 @@
 import isEqual from 'lodash/isEqual.js'
 let compare = (value, other) => {
     return isEqual(value, other)
-}
+} // simply using lodash's isEqual method, i suspect it wasnt not the desired solution so providing my own compare2 function next 
 let compare2 = (value, other) => {
         if (typeof value !== 'object') return value === other;
         let keys = Object.keys(value)
@@ -10,39 +10,3 @@ let compare2 = (value, other) => {
         }
         return true;
 }
-let tree1 = {
-    value: 1,
-    left: {
-      value: 2,
-      left: undefined,
-      right: undefined
-    },
-    right: {
-      value: 3,
-      left: undefined,
-      right: {
-        value: 4,
-        left: undefined,
-        right: undefined
-      }
-    }
-}
-let tree2 = {
-    value: 1,
-    left: {
-      value: 2,
-      left: undefined,
-      right: undefined
-    },
-    right: {
-      value: 4,
-      left: undefined,
-      right: {
-        value: 4,
-        left: undefined,
-        right: undefined
-      }
-    }
-}
-console.log(compare(tree1, tree2))
-console.log(compare2(tree1, tree2))
