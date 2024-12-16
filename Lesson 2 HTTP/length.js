@@ -1,16 +1,23 @@
 const getLength = (any) => {
-    let type = typeof(any)
+    let type = typeof any
+    let length = 0
     switch (type) {
         case 'object':
             if (Array.isArray(any)) {
-                return any.length
-            } else {
-                return 0
-            }
+                length = any.length
+            } else if (any.length) {
+                length = any.length
+            } else if (any instanceof Map || any instanceof Set) {
+                length = any.size
+            } 
+            break
         case 'string':
         case 'function':
-            return any.length
+            length = any.length
+            break
         default:
-            return 0
+            break
     }
-}
+    console.log(length)
+    return ''
+}; 
