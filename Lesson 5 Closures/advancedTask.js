@@ -9,6 +9,7 @@ const firstSum = (arr, total) => {
   }
   return [];
 }; // so, this function here has the worst case time complexity of O(n*n) and space complexity of O(n)
-// Note: i dont have a clean picture of what complexity does set.has method have, so i assume it checks all of the set for the specified value, as in for of loop, but some people on the internet are saying it's complexity is O(1), which i am sceptical of, but in such case it would be simple O(n).
+// Note: i dont have a clean picture of what complexity does set.has method has, so i assume it traverses all of the set looking for the specified value,
+// as in for of loop, but some people on the internet are saying it's complexity is O(1), which i am sceptical of, but in such case it would be simple O(n) time complexity for all of my fucntion.
 
 console.log(firstSum([1, 2, 3, 4, 5], 8)); // [3,5]
