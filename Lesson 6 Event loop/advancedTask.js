@@ -5,7 +5,7 @@ async function delayedLogger(arr) {
   }
 }
 
-// either the following will be logged in the second part of the task:
-// 1 2 "A" 3 "B" 7 "C" 8 "C" 4 "B" 9 "D" 10 "D" 5 "B" 6
-// or the following:
+// the following will be logged in the second part of the task:
 // 1 2 "A" 3 "B" 7 "C" 4 "B" 8 "C" 9 "D" 5 "C" 10 "D" 6
+// i had 2 guesses initially but after looking it up in my IDE i deleted the first one,
+// they both are incrorrect but this one is closer
